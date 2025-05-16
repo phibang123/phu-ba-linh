@@ -52,7 +52,7 @@ const Main = () => {
   return (
     <div className="p-3 bg-[#FEEEEF] flex flex-col font-mono rounded-tr-[5px] ">
       <div
-        className="rounded-[5px] h-[360px] md:h-[360px] xl:h-[400px] 2xl:h-[450px] p-2 flex flex-col gap-2 justify-between"
+        className="rounded-[5px] h-[360px] xl:h-[420px] 2xl:h-[450px] p-2 flex flex-col gap-2 justify-between"
         style={{
           backgroundImage:
             "linear-gradient(#ccc 1px, transparent 1px), linear-gradient(90deg, #ccc 1px, transparent 1px)",
@@ -62,7 +62,7 @@ const Main = () => {
         }}
       >
         <div className="flex justify-between">
-          <div className="flex flex-col flex-wrap gap-2 max-h-[280px] xl:max-h-[400px] items-start" >
+          <div className="flex flex-col flex-wrap gap-2 max-h-[280px] xl:max-h-[340px] items-start" >
             {mainIcon.map((item) => {
               return (
                 <Icon
