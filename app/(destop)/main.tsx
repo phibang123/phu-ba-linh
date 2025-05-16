@@ -52,7 +52,7 @@ const Main = () => {
   return (
     <div className="p-3 bg-[#FEEEEF] flex flex-col font-mono rounded-tr-[5px] ">
       <div
-        className="rounded-[5px] h-[360px] md:h-[360px] xl:h-[550px] 2xl:h-[600px] p-2 flex flex-col gap-2 justify-between"
+        className="rounded-[5px] h-[360px] md:h-[360px] xl:h-[400px] 2xl:h-[450px] p-2 flex flex-col gap-2 justify-between"
         style={{
           backgroundImage:
             "linear-gradient(#ccc 1px, transparent 1px), linear-gradient(90deg, #ccc 1px, transparent 1px)",
