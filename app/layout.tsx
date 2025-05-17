@@ -21,9 +21,9 @@ export const metadata: Metadata = {
   title: "Clover Jam",
   description: "Clover Jam",
   icons: {
-    icon: '/favicon-ico/icon.png',
-    shortcut: '/favicon-ico/icon.png',
-    apple: '/favicon-ico/icon.png',
+    icon: { url: '/favicon-ico/icon.png', type: 'image/png' },
+    shortcut: { url: '/favicon-ico/icon.png', type: 'image/png' },
+    apple: { url: '/favicon-ico/icon.png', type: 'image/png' },
   },
 };
 
