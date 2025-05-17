@@ -8,7 +8,7 @@ const Header = () => {
           zIndex: 1,
         }}
       >
-        <p className="m-0 text-sm bg-white rounded-[5px] text-black px-2 py-1">
+        <p className="font-mono font-medium m-0 text-sm bg-white rounded-[5px] text-[#8C7D7D] px-2 py-1">
           clover&apos;s desktop
         </p>
       </div>

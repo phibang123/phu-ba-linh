@@ -10,7 +10,7 @@ const Bottom = () => {
         zIndex: 3,
       }}
     >
-      <Image src="/icon/speaker.png" alt="youtube" width={20} height={20} />
+      <Image src="/icon/speaker.png" className="cursor-pointer" alt="youtube" width={20} height={20} />
 
       <div className="flex flex-col items-start gap-0.5 text-xs text-[#666]">
         <div className="self-end">

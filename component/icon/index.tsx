@@ -1,5 +1,8 @@
+'use client'
+
 import Image from "next/image";
-import React from "react";
+import React, { useRef } from "react";
+import { gsap } from "gsap";
 
 interface IconProps {
   icon: string;
@@ -9,12 +12,44 @@ interface IconProps {
 }
 
 const Icon = ({ icon, title, classNameImage = "", classNameCard = "" }: IconProps) => {
+  const imageRef = useRef<HTMLDivElement>(null);
+  
+  const handleMouseEnter = () => {
+    if (imageRef.current) {
+      gsap.to(imageRef.current, {
+        rotation: 15,
+        scale: 1.1,
+        duration: 0.2,
+        ease: "power2.out"
+      });
+    }
+  };
+  
+  const handleMouseLeave = () => {
+    if (imageRef.current) {
+      gsap.to(imageRef.current, {
+        rotation: 0,
+        scale: 1,
+        duration: 0.2,
+        ease: "power2.out"
+      });
+    }
+  };
+  
   return (
     <div
-      className={`font-medium text-[#8C7D7D] text-xs ${classNameCard}`}
+      className={`font-medium text-[#8C7D7D] text-xs cursor-pointer ${classNameCard}`}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
-      <div className={`${classNameImage}`}>
-        <Image className="filter drop-shadow-[0px_3.45px_3.45px_rgba(0,0,0,0.25)]" src={icon} alt={title} width={35} height={35} />
+      <div ref={imageRef} className={`transition-transform ${classNameImage}`}>
+        <Image 
+          className="filter drop-shadow-[0px_3.45px_3.45px_rgba(0,0,0,0.25)]" 
+          src={icon} 
+          alt={title} 
+          width={35} 
+          height={35} 
+        />
       </div>
       <p className="font-itim text-xs font-medium leading-2">{title}</p>
     </div>
