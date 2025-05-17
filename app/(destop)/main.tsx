@@ -5,46 +5,46 @@ import WidgetSmith from "@/component/widget/WidgetSmith";
 const mainIcon = [
   {
     icon: "/icon/about.png",
-    title: "about",
+    title: "About",
   },
   {
     icon: "/icon/works.png",
-    title: "works",
+    title: "Works",
   },
   {
     icon: "/icon/gallery.png",
-    title: "gallery",
+    title: "Gallery",
   },
   {
     icon: "/icon/contact.png",
-    title: "contact",
+    title: "Contact",
   },
   {
     icon: "/icon/resources.png",
-    title: "resources",
+    title: "Resources",
   },
   {
     icon: "/icon/media.png",
-    title: "media",
+    title: "Media",
   },
   {
     icon: "/icon/stuff.png",
-    title: "stuff",
+    title: "Stuff",
   },
   {
     icon: "/icon/upload.png",
-    title: "upload",
+    title: "Upload",
   },
 ];
 
 const bottomIcon = [
   {
     icon: "/icon/youtube.png",
-    title: "youtube",
+    title: "Youtube",
   },
   {
     icon: "/icon/discord.png",
-    title: "discord",
+    title: "Discord",
   },
 ];
 

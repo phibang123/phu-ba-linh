@@ -3,6 +3,9 @@
 import Image from "next/image";
 import React, { useRef } from "react";
 import { gsap } from "gsap";
+import { usePopup } from "../popup/PopupContext";
+import ContactPopupContent from "../popup/content/ContactPopupContent";
+import NothingPopupContent from "../popup/content/NothingPopupContent";
 
 interface IconProps {
   icon: string;
@@ -13,6 +16,7 @@ interface IconProps {
 
 const Icon = ({ icon, title, classNameImage = "", classNameCard = "" }: IconProps) => {
   const imageRef = useRef<HTMLDivElement>(null);
+  const { addPopup, popups } = usePopup();
   
   const handleMouseEnter = () => {
     if (imageRef.current) {
@@ -36,11 +40,28 @@ const Icon = ({ icon, title, classNameImage = "", classNameCard = "" }: IconProp
     }
   };
   
+  const handleClick = () => {
+    // Kiểm tra nếu popup Contact đã mở thì không mở thêm
+    const isContactPopupOpen = popups.some(popup => popup.title === title);
+    if (isContactPopupOpen) {
+      return;
+    }
+    
+    // Tạo vị trí ngẫu nhiên trên màn hình
+    const position = {
+      x: Math.floor(Math.random() * 300) + 50,
+      y: Math.floor(Math.random() * 200) + 50
+    };
+    
+    addPopup(title, title === 'Contact' ? <ContactPopupContent /> : <NothingPopupContent />, position);
+  };
+  
   return (
     <div
       className={`font-medium text-[#8C7D7D] text-xs cursor-pointer ${classNameCard}`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      onClick={handleClick}
     >
       <div ref={imageRef} className={`transition-transform ${classNameImage}`}>
         <Image 

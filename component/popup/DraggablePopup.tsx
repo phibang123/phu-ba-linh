@@ -64,11 +64,11 @@ const DraggablePopup: React.FC<DraggablePopupProps> = ({
 
         // Animation biến mất
         tl.to(popupRef.current, {
-          scale: 0.85,
+          scale: 0.5,
           opacity: 0,
           y: -15,
           rotation: 2,
-          duration: 0.3,
+          duration: 0.5,
           ease: "back.in(1.5)",
         });
       }
