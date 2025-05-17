@@ -50,7 +50,14 @@ const bottomIcon = [
 
 const Main = () => {
   return (
-    <div className="p-3 bg-[#FEEEEF] flex flex-col font-mono rounded-tr-[5px] ">
+    <div
+      className="p-3 bg-[#FEEEEF] flex flex-col font-mono rounded-tr-[5px]"
+      style={{
+        boxShadow: "-1.73px 4.31px 5.18px 0px rgba(0, 0, 0, 0.25)",
+        position: "relative",
+        zIndex: 2,
+      }}
+    >
       <div
         className="rounded-[5px] h-[360px] xl:h-[420px] 2xl:h-[450px] p-2 flex flex-col gap-2 justify-between"
         style={{
@@ -62,40 +69,40 @@ const Main = () => {
         }}
       >
         <div className="flex justify-between">
-          <div className="flex flex-col flex-wrap gap-2 max-h-[280px] xl:max-h-[340px] items-start" >
+          <div className="flex flex-col flex-wrap gap-2 max-h-[280px] xl:max-h-[340px] items-start">
             {mainIcon.map((item) => {
               return (
                 <Icon
                   key={item.title}
                   icon={item.icon}
                   title={item.title}
-                  classNameImage="min-h-[40px]"
+                  classNameImage="min-h-[45px]"
                 />
               );
             })}
           </div>
           <div className="flex flex-col gap-2 flex-wrap items-end justify-start">
-            <div className="flex flex-row gap-2 items-center">
+            <div className="flex flex-row gap-2 items-start">
               <WidgetSmith />
               <Announcement />
             </div>
             <div className="flex flex-col items-center justify-center text-center p-4">
-              <h1 className="m-0 text-3xl text-[#666] font-normal tracking-wider">
+              <h1 className="!font-sans m-0 text-3xl text-[#666] font-normal tracking-wider">
                 Hello world! {"<3"}
               </h1>
-              <p className="mt-1.5 mb-0 text-sm text-[#666]">@itsClover!</p>
+              <p className="mt-1.5 mb-0 !font-sans font-medium text-xl leading-2  text-[#666]">@itsClover!</p>
             </div>
           </div>
         </div>
         <div className="flex mb-2 w-full justify-center items-center">
-          <div className="bg-[#D9D9D9]/20 flex p-2 gap-4 rounded-[10px] shadow-[0px_3.45px_3.45px_0px_rgba(0,0,0,0.25)]">
+          <div className="bg-[#D9D9D9]/20 flex p-2 gap-2 rounded-[10px] shadow-[0px_3.45px_3.45px_0px_rgba(0,0,0,0.25)]">
             {bottomIcon.map((item) => {
               return (
                 <Icon
                   key={item.title}
                   icon={item.icon}
                   title={item.title}
-                  classNameImage="flex flex-col justify-center items-center"
+                  classNameCard="flex flex-col justify-center items-center gap-1"
                 />
               );
             })}

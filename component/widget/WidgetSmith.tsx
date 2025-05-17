@@ -3,8 +3,8 @@ import React from "react";
 
 const WidgetSmith = ({ className = '' }: { className?: string }) => {
   return (
-    <div className="text-[#8C7D7D] text-xs flex items-center flex-col">
-      <div className="bg-[#FEEEEF] p-2 rounded-[5px]">
+    <div className="font-itim text-xs font-medium leading-5 text-[#8C7D7D] flex items-center flex-col filter drop-shadow-[0px_3.45px_3.45px_rgba(0,0,0,0.25)]">
+      <div className="bg-[#FEEEEF] p-2 rounded-[5px] flex items-center justify-center">
         <div
           className={`font-medium p-2 rounded-[5px] bg-[#F5DEDE] ${className}`}
         >
