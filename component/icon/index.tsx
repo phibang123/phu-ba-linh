@@ -13,7 +13,7 @@ const Icon = ({ icon, title, classNameImage = "" }: IconProps) => {
       className="font-medium text-[#8C7D7D] text-xs"
     >
       <div className={`${classNameImage}`}>
-        <Image src={icon} alt={title} width={35} height={35} />
+        <Image className="filter drop-shadow-[0px_3.45px_3.45px_rgba(0,0,0,0.25)]" src={icon} alt={title} width={35} height={35} />
       </div>
       <p>{title}</p>
     </div>
